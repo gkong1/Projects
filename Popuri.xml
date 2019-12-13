@@ -1,0 +1,14 @@
+<TextureAtlas imagePath = "Popuri.png">
+  <SubTexture name = "walkdown_1.png" x="17" y="313" width="20" height="25"/>
+  <SubTexture name = "walkdown_2.png" x="47" y="313" width="20" height="25"/>
+  <SubTexture name = "walkdown_3.png" x="77" y="313" width="20" height="25"/>
+  <SubTexture name = "walkleft_1.png" x="17" y="360" width="20" height="25"/>
+  <SubTexture name = "walkleft_2.png" x="47" y="360" width="20" height="25"/>
+  <SubTexture name = "walkleft_3.png" x="77" y="360" width="20" height="25"/>
+  <SubTexture name = "walkup_1.png" x="123" y="313" width="20" height="25"/>
+  <SubTexture name = "walkup_2.png" x="153" y="313" width="20" height="25"/>
+  <SubTexture name = "walkup_3.png" x="183" y="313" width="20" height="25"/>
+  <SubTexture name = "walkright_1.png" x="123" y="360" width="20" height="25"/>
+  <SubTexture name = "walkright_2.png" x="153" y="360" width="20" height="25"/>
+  <SubTexture name = "walkright_3.png" x="183" y="360" width="20" height="25"/>
+</TextureAtlas>
