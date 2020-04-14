@@ -1,0 +1,428 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/GUI/Dashboard.gd" type="Script" id=1]
+[ext_resource path="res://assets/visual/Window.png" type="Texture" id=2]
+[ext_resource path="res://src/GUI/DateContainer.gd" type="Script" id=3]
+[ext_resource path="res://assets/visual/Hotbar.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/enemy.png" type="Texture" id=5]
+
+[node name="Dashboard" type="Control"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TopLeftViewer" type="VBoxContainer" parent="."]
+margin_top = 10.0
+margin_right = 160.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 160, 100 )
+
+[node name="StaminaBar" type="TextureProgress" parent="TopLeftViewer"]
+margin_right = 160.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DateBackground" type="TextureRect" parent="TopLeftViewer"]
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 160, 40 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="DateContainer" type="HBoxContainer" parent="TopLeftViewer/DateBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 6.0
+margin_right = -14.0
+margin_bottom = -6.0
+script = ExtResource( 3 )
+
+[node name="SeasonLabel" type="Label" parent="TopLeftViewer/DateBackground/DateContainer"]
+margin_right = 50.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 50, 28 )
+text = "Spring"
+align = 2
+valign = 1
+
+[node name="DateLabel" type="Label" parent="TopLeftViewer/DateBackground/DateContainer"]
+margin_left = 54.0
+margin_right = 74.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 20, 28 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="HourLabel" type="Label" parent="TopLeftViewer/DateBackground/DateContainer"]
+margin_left = 78.0
+margin_right = 99.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 21, 28 )
+text = "00"
+align = 2
+valign = 1
+
+[node name="SemiColonLabel" type="Label" parent="TopLeftViewer/DateBackground/DateContainer"]
+margin_left = 103.0
+margin_top = 7.0
+margin_right = 107.0
+margin_bottom = 21.0
+text = ":"
+
+[node name="MinuteLabel" type="Label" parent="TopLeftViewer/DateBackground/DateContainer"]
+margin_left = 111.0
+margin_right = 132.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 21, 28 )
+text = "00"
+valign = 1
+
+[node name="Hotbar" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -355.0
+margin_top = -90.0
+margin_right = 355.0
+rect_min_size = Vector2( 0, 62 )
+
+[node name="HotbarBackground" type="TextureRect" parent="Hotbar"]
+editor/display_folded = true
+modulate = Color( 0.839216, 0.776471, 0.67451, 1 )
+margin_right = 710.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Margin" type="MarginContainer" parent="Hotbar/HotbarBackground"]
+margin_right = 710.0
+rect_min_size = Vector2( 0, 28 )
+size_flags_horizontal = 3
+
+[node name="HotbarGrid" type="HBoxContainer" parent="Hotbar/HotbarBackground"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 29.0
+margin_top = 28.0
+margin_right = -30.0
+margin_bottom = -6.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot1" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_right = 60.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot1"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot2" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot2"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot3" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot3"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot4" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 192.0
+margin_right = 252.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot4"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot5" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 256.0
+margin_right = 316.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot5"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot6" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 320.0
+margin_right = 380.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot6"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot7" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 384.0
+margin_right = 444.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot7"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot8" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 448.0
+margin_right = 508.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot8"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot9" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 512.0
+margin_right = 572.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot9"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="Slot10" type="TextureButton" parent="Hotbar/HotbarBackground/HotbarGrid"]
+editor/display_folded = true
+margin_left = 576.0
+margin_right = 636.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 60, 56 )
+
+[node name="TextureRect" type="TextureRect" parent="Hotbar/HotbarBackground/HotbarGrid/Slot10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Hotbar/HotbarBackground/HotbarGrid/Slot10"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -14.0
+margin_right = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "99"
+align = 2
+valign = 1
+
+[node name="TopRightViewer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -200.0
+margin_top = 15.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+
+[node name="InspectorButton" type="TextureButton" parent="TopRightViewer"]
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="TopRightViewer"]
+margin_left = 54.0
+margin_right = 64.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="InventoryButton" type="TextureButton" parent="TopRightViewer"]
+margin_left = 68.0
+margin_right = 118.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="TopRightViewer"]
+margin_left = 122.0
+margin_right = 132.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="MainMenuButton" type="TextureButton" parent="TopRightViewer"]
+margin_left = 136.0
+margin_right = 186.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="TopRightViewer"]
+margin_left = 190.0
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 10, 0 )
+[connection signal="pressed" from="TopRightViewer/InventoryButton" to="." method="_on_InventoryButton_pressed"]

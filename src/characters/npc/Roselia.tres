@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/characters/npc/NPC_stats.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+NPC_name = "Roselia"
+chatted = false
+friendship_pts = 0
+friendship_pts_max = 10000
+marriage_candidate = false
