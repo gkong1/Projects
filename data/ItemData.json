@@ -1,0 +1,104 @@
+{
+  "CropData": {
+    "Turnip": {
+      "Freshness": 100,
+      "StarRank": 1,
+      "Stackable": "Y",
+      "Category": "Crops",
+      "Price": 150
+    },
+    "Eggplant": {
+      "Freshness": 100,
+      "StarRank": 1,
+      "Stackable": "Y",
+      "Category": "Crops",
+      "Price": 80
+    },
+    "Tomato": {
+      "Freshness": 100,
+      "StarRank": 1,
+      "Stackable": "Y",
+      "Category": "Crops",
+      "Price": 90
+    },
+    "Cucumber": {
+      "Freshness": 100,
+      "StarRank": 1,
+      "Stackable": "Y",
+      "Category": "Crops",
+      "Price": 75
+    }
+  },
+  "ToolData": {
+    "OldHoe": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 250,
+      "SellPrice": 200,
+      "StaminaUsage": 8
+    },
+    "Hoe": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 350,
+      "SellPrice": 300,
+      "StaminaUsage": 6
+    },
+    "GoldenHoe": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 450,
+      "SellPrice": 400,
+      "StaminaUsage": 4
+    },
+    "MasterHoe": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 550,
+      "SellPrice": 500,
+      "StaminaUsage": 2
+    },
+    "OldWateringCan": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 250,
+      "SellPrice": 200,
+      "StaminaUsage": 8
+    },
+    "WateringCan": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 350,
+      "SellPrice": 300,
+      "StaminaUsage": 6
+    },
+    "GoldenWateringCan": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 450,
+      "SellPrice": 400,
+      "StaminaUsage": 4
+    },
+    "MasterWateringCan": {
+      "Stackable": "N",
+      "Category": "Tools",
+      "BuyPrice": 550,
+      "SellPrice": 500,
+      "StaminaUsage": 2
+    },
+    "TurnipSeeds": {
+      "Stackable": "Y",
+      "Category": "Seeds",
+      "BuyPrice": 100,
+      "SellPrice": 50,
+      "StaminaUsage": 1
+    },
+    "CucumberSeeds": {
+      "Stackable": "Y",
+      "Category": "Seeds",
+      "BuyPrice": 150,
+      "SellPrice": 100,
+      "StaminaUsage": 1
+    }
+  }
+}

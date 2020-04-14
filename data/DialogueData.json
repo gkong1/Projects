@@ -1,0 +1,26 @@
+{
+  "DialogueData": {
+    "Roselia": {
+      "Chat0": "Hello. Do you need anything from me?",
+      "Chat1": "It must be hard to be a farmer.",
+      "Chat2": "You're impressive.",
+      "EndConvo": "See you soon.",
+      "GiftLove": "Oh my, you shouldn't have!",
+      "GiftLike": "I like this.",
+      "GiftNeutral": "Thank youl",
+      "GiftDislike": "Please don't give me this again. ",
+      "Expression": "null"
+    },
+    "Mark": {
+      "Chat0": "Hi!",
+      "Chat1": "How are things at the farm?",
+      "Chat2": "Sure is not easy to be a farmer.",
+      "EndConvo": "Let me know if you need anything.",
+      "GiftLove": "I love this!",
+      "GiftLike": "Ooh, I like this. ",
+      "GiftNeutral": "Thanks!",
+      "GiftDislike": "Oh, why are you giving me this?",
+      "Expression": "null"
+    }
+  }
+}

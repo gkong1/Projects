@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/characters/npc/Roselia.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GUI/Dashboard.tscn" type="PackedScene" id=3]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Roselia" parent="." instance=ExtResource( 1 )]
+position = Vector2( 456, 280 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 270.172, 333.861 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dashboard" parent="CanvasLayer" instance=ExtResource( 3 )]
