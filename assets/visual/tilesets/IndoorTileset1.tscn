@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/visual/open_tileset.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="PinkFloorTile" type="Sprite" parent="."]
+position = Vector2( 100, -60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 32 )
+
+[node name="WoodenFloorTile" type="Sprite" parent="."]
+position = Vector2( 50, -60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="RedFloor" type="Sprite" parent="."]
+position = Vector2( 50.4763, -16.8991 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="WhiteFloorTile" type="Sprite" parent="."]
+position = Vector2( 100.721, -16.8991 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
